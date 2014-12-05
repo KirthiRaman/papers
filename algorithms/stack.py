@@ -1,3 +1,5 @@
+import sys
+
 class Stack:
      def __init__(self):
          self.items = []
@@ -16,3 +18,21 @@ class Stack:
 
      def size(self):
          return len(self.items)
+
+def main(argv):
+     s=Stack()
+
+     print(s.isEmpty())
+     s.push(4)
+     s.push('algorithms')
+     print(s.peek())
+     s.push(True)
+     print(s.size())
+     print(s.isEmpty())
+     s.push(9.82)
+     print(s.pop())
+     print(s.pop())
+     print(s.size())
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
